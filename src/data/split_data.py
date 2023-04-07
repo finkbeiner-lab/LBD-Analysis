@@ -351,7 +351,7 @@ class SplitData:
 
 if __name__ == "__main__":
     #TODO Fix data aug - Not Running
-    base_WSI_path = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/WM_images2"
+    base_WSI_path = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/WM_images3"
     class_1_folder_name = 'White'
     class_2_folder_name = 'grey'
     class_3_folder_name = 'bg'
