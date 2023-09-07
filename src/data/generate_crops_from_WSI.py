@@ -117,7 +117,7 @@ if __name__=="main":
     dlb_wsi_dir = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD_Dataset/LBD/DLB_cases"
     json_dir = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/GeoJsons"
     save_dir = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/WM_images3"
-    #imagenames = sorted(glob.glob(os.path.join(dlb_wsi_dir, './*.svs')))
+    imagenames = sorted(glob.glob(os.path.join(dlb_wsi_dir, './*.svs')))
     f_list = os.listdir(json_dir)
     f_list.remove('.DS_Store')
     tilesize = 1024
@@ -129,8 +129,8 @@ if __name__=="main":
     REF_IMG_PATH = '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD_Dataset/LBD/./DLB_cases/11_063_CG_aSyn_x200.svs'
     normalizer = normalization(REF_IMG_PATH)
 
-    #for img in imagenames:
-    #   filename = img.split("/")[-1]
+    for img in imagenames:
+       filename = img.split("/")[-1]
         geo_name = filename+".geojson"
         if geo_name in f_list:
             with open(os.path.join(json_dir,geo_name)) as f:

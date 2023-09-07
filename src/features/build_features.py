@@ -1,6 +1,6 @@
 import os
 from matplotlib import image
-
+from torchvision import transforms
 import torch
 import numpy as np
 from PIL import Image
@@ -8,14 +8,17 @@ import pdb
 
 
 class LBD_Dataset(object):
-    def __init__(self, root, transforms):
+    def __init__(self, root, transforms, foldernames_img_label):
         self.root = root
         self.transforms = transforms
         # load all image files, sorting them to
         # ensure that they are aligned
-        self.imgs = list(sorted(os.listdir(os.path.join(root, "images"))))
-        self.masks = list(sorted(os.listdir(os.path.join(root, "labels"))))
-
+        #self.imgs = list(sorted(os.listdir(os.path.join(root, "images"))))
+        #self.masks = list(sorted(os.listdir(os.path.join(root, "labels"))))
+        self.img_folder = foldernames_img_label[0]
+        self.label_folder = foldernames_img_label[1]
+        self.imgs = list(sorted(os.listdir(os.path.join(root, self.img_folder))))
+        self.masks = list(sorted(os.listdir(os.path.join(root,self.label_folder))))
         assert set([len(set(['_'.join('.'.join(s.split('.')[:-1]).split('_')[:-1]) for s in item])) for item in zip(self.imgs, self.masks)]) == {1}
         # print("\nImages Order ", self.imgs)
         # print("\nLabels Order", self.masks)
@@ -23,9 +26,8 @@ class LBD_Dataset(object):
 
     def __getitem__(self, idx):
         # load images and masks
-        img_path = os.path.join(self.root, "images", self.imgs[idx])
-        mask_path = os.path.join(self.root, "labels", self.masks[idx])
-
+        img_path = os.path.join(self.root,self.img_folder, self.imgs[idx])
+        mask_path = os.path.join(self.root, self.label_folder, self.masks[idx])
         img = Image.open(img_path).convert("RGB")
         # note that we haven't converted the mask to RGB,
         # because each color corresponds to a different instance
@@ -72,7 +74,8 @@ class LBD_Dataset(object):
         # labels = torch.tensor(labels, dtype=torch.int64)
         # labels = torch.ones((num_objs,), dtype=torch.int64)
 
-        x = [id // 50 for id in obj_ids]
+        #x = [id // 50 for id in obj_ids]
+        x = [1 for id in obj_ids]
         labels = torch.tensor(x)
 
 
@@ -92,7 +95,8 @@ class LBD_Dataset(object):
         target["iscrowd"] = iscrowd
 
         if self.transforms is not None:
-            img, target = self.transforms(img, target)
+            img= self.transforms(img)
+            #target = self.transforms(target)
 
         return img, target
 
