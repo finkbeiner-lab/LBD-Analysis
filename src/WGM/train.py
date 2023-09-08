@@ -296,7 +296,7 @@ def test_model(model, run, eval_path):
 
 data_transforms = {
     'train': transforms.Compose([
-        transforms.RandomResizedCrop(1024),
+        transforms.RandomResizedCrop(1022),
         transforms.RandomHorizontalFlip(),
         transforms.RandomVerticalFlip(),
         #transforms.FiveCrop(256),
@@ -305,7 +305,7 @@ data_transforms = {
         #transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
     'val': transforms.Compose([
-        transforms.Resize(1024),
+        transforms.Resize(1022),
         #transforms.CenterCrop(256),
         transforms.ToTensor(),
         transforms.Normalize([0.8965, 0.8875, 0.9023],[0.0807, 0.0911, 0.0849])
@@ -319,11 +319,29 @@ data_transforms = {
         #transforms.Normalize([0.485, 0.456, 0.406], [0.229, 0.224, 0.225])
     ]),
 }
+dinov2_vits14 = torch.hub.load('facebookresearch/dinov2', 'dinov2_vits14')
 
-if __name__=="main":
-    TRAIN_CSV_PATH = "/home/mahirwar/Desktop/Monika/npsad_data/monika/LBD/Intermediate_data/train_redmarked.csv"
-    VAL_CSV_PATH = "/home/mahirwar/Desktop/Monika/npsad_data/monika/LBD/Intermediate_data/val_redmarked.csv"
-    batch_size = 8
+class DinoVisionTransformerClassifier(nn.Module):
+    def __init__(self):
+        super(DinoVisionTransformerClassifier, self).__init__()
+        self.transformer = dinov2_vits14
+        self.classifier = nn.Sequential(
+            nn.Linear(384, 256),
+            nn.ReLU(),
+            nn.Linear(256, 3)
+        )
+    
+    def forward(self, x):
+        x = self.transformer(x)
+        x = self.transformer.norm(x)
+        x = self.classifier(x)
+        return x
+
+if __name__ == '__main__':
+    print("--------Running Model------------")
+    TRAIN_CSV_PATH = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/Intermediate_data/train_redmarked.csv"
+    VAL_CSV_PATH = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/Intermediate_data/val_redmarked.csv"
+    batch_size = 1
     
     train_wgm = WGM_dataset(TRAIN_CSV_PATH, data_transforms, "train", batch_size)
     val_wgm = WGM_dataset(VAL_CSV_PATH, data_transforms, "val", batch_size)
@@ -338,7 +356,7 @@ if __name__=="main":
     dataset_sizes = {'train':train_datasize, 'val':val_datasize}
     
     train_config = dict(
-    epochs = 20,
+    epochs = 10,
     batch_size = batch_size,
     num_classes = 3,
     device_id = 0,
@@ -371,7 +389,7 @@ if __name__=="main":
     exp_name = run.name
     artifact_name = f'{run_id}-logs'
     
-    
+    """
     model_ft = models.resnet50(pretrained=True)
     num_ftrs = model_ft.fc.in_features
     # Here the size of each output sample is set to 2.
@@ -392,12 +410,31 @@ if __name__=="main":
     model_ft, log_metrics = train_model(run, model_ft, criterion, optimizer_ft, exp_lr_scheduler,
                        num_epochs=train_config["epochs"])
     
+
+     """
+    model_dino = DinoVisionTransformerClassifier()
+
+    model_dino = model_dino.to(device)
+
+    criterion = nn.CrossEntropyLoss()
+
+    # Observe that all parameters are being optimized
+    optimizer_ft = optim.SGD(model_dino.parameters(), lr=0.001, momentum=0.9)
+    #optimizer_ft = optim.Adam(model_ft.parameters(), lr=0.0001)
+
+    # Decay LR by a factor of 0.1 every 7 epochs
+    exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)
+
+    model_dino, log_metrics = train_model(run, model_dino, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=train_config["epochs"])
+
     eval_path = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/WM_Evaluation_Metrics/"+run_id
 
     if not os.path.exists(eval_path):
         os.makedirs(eval_path)
     
     plot_training_curve(log_metrics,eval_path)
-    output_df = test_model(model_ft, run, eval_path)
+    output_df = test_model(model_dino, run, eval_path)
     
     run.finish()
+
+#main()
