@@ -1,0 +1,975 @@
+/gladstone/finkbeiner/home/mahirwar/miniforge3/envs/gigapath2/lib/python3.9/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/gladstone/finkbeiner/home/mahirwar/miniforge3/envs/gigapath2/lib/python3.9/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=None`.
+  warnings.warn(msg)
+/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/feature_extractor/build_graphs.py:162: FutureWarning: You are using `torch.load` with `weights_only=False` (the current default value), which uses the default pickle module implicitly. It is possible to construct malicious pickle data which will execute arbitrary code during unpickling (See https://github.com/pytorch/pytorch/blob/main/SECURITY.md#untrusted-models for more details). In a future release, the default value for `weights_only` will be flipped to `True`. This limits the functions that could be executed during unpickling. Arbitrary objects will no longer be allowed to be loaded via this mode unless they are explicitly allowlisted by the user via `torch.serialization.add_safe_globals`. We recommend you start setting `weights_only=True` for any use case where you don't have full control of the loaded file. Please open an issue on GitHub for any issues related to this experimental feature.
+  state_dict_weights = torch.load(args.weights)
+features.0.weight torch.Size([64, 3, 7, 7])
+features.1.weight torch.Size([64])
+features.1.bias torch.Size([64])
+features.1.running_mean torch.Size([64])
+features.1.running_var torch.Size([64])
+features.1.num_batches_tracked torch.Size([])
+features.4.0.conv1.weight torch.Size([64, 64, 1, 1])
+features.4.0.bn1.weight torch.Size([64])
+features.4.0.bn1.bias torch.Size([64])
+features.4.0.bn1.running_mean torch.Size([64])
+features.4.0.bn1.running_var torch.Size([64])
+features.4.0.bn1.num_batches_tracked torch.Size([])
+features.4.0.conv2.weight torch.Size([64, 64, 3, 3])
+features.4.0.bn2.weight torch.Size([64])
+features.4.0.bn2.bias torch.Size([64])
+features.4.0.bn2.running_mean torch.Size([64])
+features.4.0.bn2.running_var torch.Size([64])
+features.4.0.bn2.num_batches_tracked torch.Size([])
+features.4.0.conv3.weight torch.Size([256, 64, 1, 1])
+features.4.0.bn3.weight torch.Size([256])
+features.4.0.bn3.bias torch.Size([256])
+features.4.0.bn3.running_mean torch.Size([256])
+features.4.0.bn3.running_var torch.Size([256])
+features.4.0.bn3.num_batches_tracked torch.Size([])
+features.4.0.downsample.0.weight torch.Size([256, 64, 1, 1])
+features.4.0.downsample.1.weight torch.Size([256])
+features.4.0.downsample.1.bias torch.Size([256])
+features.4.0.downsample.1.running_mean torch.Size([256])
+features.4.0.downsample.1.running_var torch.Size([256])
+features.4.0.downsample.1.num_batches_tracked torch.Size([])
+features.4.1.conv1.weight torch.Size([64, 256, 1, 1])
+features.4.1.bn1.weight torch.Size([64])
+features.4.1.bn1.bias torch.Size([64])
+features.4.1.bn1.running_mean torch.Size([64])
+features.4.1.bn1.running_var torch.Size([64])
+features.4.1.bn1.num_batches_tracked torch.Size([])
+features.4.1.conv2.weight torch.Size([64, 64, 3, 3])
+features.4.1.bn2.weight torch.Size([64])
+features.4.1.bn2.bias torch.Size([64])
+features.4.1.bn2.running_mean torch.Size([64])
+features.4.1.bn2.running_var torch.Size([64])
+features.4.1.bn2.num_batches_tracked torch.Size([])
+features.4.1.conv3.weight torch.Size([256, 64, 1, 1])
+features.4.1.bn3.weight torch.Size([256])
+features.4.1.bn3.bias torch.Size([256])
+features.4.1.bn3.running_mean torch.Size([256])
+features.4.1.bn3.running_var torch.Size([256])
+features.4.1.bn3.num_batches_tracked torch.Size([])
+features.4.2.conv1.weight torch.Size([64, 256, 1, 1])
+features.4.2.bn1.weight torch.Size([64])
+features.4.2.bn1.bias torch.Size([64])
+features.4.2.bn1.running_mean torch.Size([64])
+features.4.2.bn1.running_var torch.Size([64])
+features.4.2.bn1.num_batches_tracked torch.Size([])
+features.4.2.conv2.weight torch.Size([64, 64, 3, 3])
+features.4.2.bn2.weight torch.Size([64])
+features.4.2.bn2.bias torch.Size([64])
+features.4.2.bn2.running_mean torch.Size([64])
+features.4.2.bn2.running_var torch.Size([64])
+features.4.2.bn2.num_batches_tracked torch.Size([])
+features.4.2.conv3.weight torch.Size([256, 64, 1, 1])
+features.4.2.bn3.weight torch.Size([256])
+features.4.2.bn3.bias torch.Size([256])
+features.4.2.bn3.running_mean torch.Size([256])
+features.4.2.bn3.running_var torch.Size([256])
+features.4.2.bn3.num_batches_tracked torch.Size([])
+features.5.0.conv1.weight torch.Size([128, 256, 1, 1])
+features.5.0.bn1.weight torch.Size([128])
+features.5.0.bn1.bias torch.Size([128])
+features.5.0.bn1.running_mean torch.Size([128])
+features.5.0.bn1.running_var torch.Size([128])
+features.5.0.bn1.num_batches_tracked torch.Size([])
+features.5.0.conv2.weight torch.Size([128, 128, 3, 3])
+features.5.0.bn2.weight torch.Size([128])
+features.5.0.bn2.bias torch.Size([128])
+features.5.0.bn2.running_mean torch.Size([128])
+features.5.0.bn2.running_var torch.Size([128])
+features.5.0.bn2.num_batches_tracked torch.Size([])
+features.5.0.conv3.weight torch.Size([512, 128, 1, 1])
+features.5.0.bn3.weight torch.Size([512])
+features.5.0.bn3.bias torch.Size([512])
+features.5.0.bn3.running_mean torch.Size([512])
+features.5.0.bn3.running_var torch.Size([512])
+features.5.0.bn3.num_batches_tracked torch.Size([])
+features.5.0.downsample.0.weight torch.Size([512, 256, 1, 1])
+features.5.0.downsample.1.weight torch.Size([512])
+features.5.0.downsample.1.bias torch.Size([512])
+features.5.0.downsample.1.running_mean torch.Size([512])
+features.5.0.downsample.1.running_var torch.Size([512])
+features.5.0.downsample.1.num_batches_tracked torch.Size([])
+features.5.1.conv1.weight torch.Size([128, 512, 1, 1])
+features.5.1.bn1.weight torch.Size([128])
+features.5.1.bn1.bias torch.Size([128])
+features.5.1.bn1.running_mean torch.Size([128])
+features.5.1.bn1.running_var torch.Size([128])
+features.5.1.bn1.num_batches_tracked torch.Size([])
+features.5.1.conv2.weight torch.Size([128, 128, 3, 3])
+features.5.1.bn2.weight torch.Size([128])
+features.5.1.bn2.bias torch.Size([128])
+features.5.1.bn2.running_mean torch.Size([128])
+features.5.1.bn2.running_var torch.Size([128])
+features.5.1.bn2.num_batches_tracked torch.Size([])
+features.5.1.conv3.weight torch.Size([512, 128, 1, 1])
+features.5.1.bn3.weight torch.Size([512])
+features.5.1.bn3.bias torch.Size([512])
+features.5.1.bn3.running_mean torch.Size([512])
+features.5.1.bn3.running_var torch.Size([512])
+features.5.1.bn3.num_batches_tracked torch.Size([])
+features.5.2.conv1.weight torch.Size([128, 512, 1, 1])
+features.5.2.bn1.weight torch.Size([128])
+features.5.2.bn1.bias torch.Size([128])
+features.5.2.bn1.running_mean torch.Size([128])
+features.5.2.bn1.running_var torch.Size([128])
+features.5.2.bn1.num_batches_tracked torch.Size([])
+features.5.2.conv2.weight torch.Size([128, 128, 3, 3])
+features.5.2.bn2.weight torch.Size([128])
+features.5.2.bn2.bias torch.Size([128])
+features.5.2.bn2.running_mean torch.Size([128])
+features.5.2.bn2.running_var torch.Size([128])
+features.5.2.bn2.num_batches_tracked torch.Size([])
+features.5.2.conv3.weight torch.Size([512, 128, 1, 1])
+features.5.2.bn3.weight torch.Size([512])
+features.5.2.bn3.bias torch.Size([512])
+features.5.2.bn3.running_mean torch.Size([512])
+features.5.2.bn3.running_var torch.Size([512])
+features.5.2.bn3.num_batches_tracked torch.Size([])
+features.5.3.conv1.weight torch.Size([128, 512, 1, 1])
+features.5.3.bn1.weight torch.Size([128])
+features.5.3.bn1.bias torch.Size([128])
+features.5.3.bn1.running_mean torch.Size([128])
+features.5.3.bn1.running_var torch.Size([128])
+features.5.3.bn1.num_batches_tracked torch.Size([])
+features.5.3.conv2.weight torch.Size([128, 128, 3, 3])
+features.5.3.bn2.weight torch.Size([128])
+features.5.3.bn2.bias torch.Size([128])
+features.5.3.bn2.running_mean torch.Size([128])
+features.5.3.bn2.running_var torch.Size([128])
+features.5.3.bn2.num_batches_tracked torch.Size([])
+features.5.3.conv3.weight torch.Size([512, 128, 1, 1])
+features.5.3.bn3.weight torch.Size([512])
+features.5.3.bn3.bias torch.Size([512])
+features.5.3.bn3.running_mean torch.Size([512])
+features.5.3.bn3.running_var torch.Size([512])
+features.5.3.bn3.num_batches_tracked torch.Size([])
+features.6.0.conv1.weight torch.Size([256, 512, 1, 1])
+features.6.0.bn1.weight torch.Size([256])
+features.6.0.bn1.bias torch.Size([256])
+features.6.0.bn1.running_mean torch.Size([256])
+features.6.0.bn1.running_var torch.Size([256])
+features.6.0.bn1.num_batches_tracked torch.Size([])
+features.6.0.conv2.weight torch.Size([256, 256, 3, 3])
+features.6.0.bn2.weight torch.Size([256])
+features.6.0.bn2.bias torch.Size([256])
+features.6.0.bn2.running_mean torch.Size([256])
+features.6.0.bn2.running_var torch.Size([256])
+features.6.0.bn2.num_batches_tracked torch.Size([])
+features.6.0.conv3.weight torch.Size([1024, 256, 1, 1])
+features.6.0.bn3.weight torch.Size([1024])
+features.6.0.bn3.bias torch.Size([1024])
+features.6.0.bn3.running_mean torch.Size([1024])
+features.6.0.bn3.running_var torch.Size([1024])
+features.6.0.bn3.num_batches_tracked torch.Size([])
+features.6.0.downsample.0.weight torch.Size([1024, 512, 1, 1])
+features.6.0.downsample.1.weight torch.Size([1024])
+features.6.0.downsample.1.bias torch.Size([1024])
+features.6.0.downsample.1.running_mean torch.Size([1024])
+features.6.0.downsample.1.running_var torch.Size([1024])
+features.6.0.downsample.1.num_batches_tracked torch.Size([])
+features.6.1.conv1.weight torch.Size([256, 1024, 1, 1])
+features.6.1.bn1.weight torch.Size([256])
+features.6.1.bn1.bias torch.Size([256])
+features.6.1.bn1.running_mean torch.Size([256])
+features.6.1.bn1.running_var torch.Size([256])
+features.6.1.bn1.num_batches_tracked torch.Size([])
+features.6.1.conv2.weight torch.Size([256, 256, 3, 3])
+features.6.1.bn2.weight torch.Size([256])
+features.6.1.bn2.bias torch.Size([256])
+features.6.1.bn2.running_mean torch.Size([256])
+features.6.1.bn2.running_var torch.Size([256])
+features.6.1.bn2.num_batches_tracked torch.Size([])
+features.6.1.conv3.weight torch.Size([1024, 256, 1, 1])
+features.6.1.bn3.weight torch.Size([1024])
+features.6.1.bn3.bias torch.Size([1024])
+features.6.1.bn3.running_mean torch.Size([1024])
+features.6.1.bn3.running_var torch.Size([1024])
+features.6.1.bn3.num_batches_tracked torch.Size([])
+features.6.2.conv1.weight torch.Size([256, 1024, 1, 1])
+features.6.2.bn1.weight torch.Size([256])
+features.6.2.bn1.bias torch.Size([256])
+features.6.2.bn1.running_mean torch.Size([256])
+features.6.2.bn1.running_var torch.Size([256])
+features.6.2.bn1.num_batches_tracked torch.Size([])
+features.6.2.conv2.weight torch.Size([256, 256, 3, 3])
+features.6.2.bn2.weight torch.Size([256])
+features.6.2.bn2.bias torch.Size([256])
+features.6.2.bn2.running_mean torch.Size([256])
+features.6.2.bn2.running_var torch.Size([256])
+features.6.2.bn2.num_batches_tracked torch.Size([])
+features.6.2.conv3.weight torch.Size([1024, 256, 1, 1])
+features.6.2.bn3.weight torch.Size([1024])
+features.6.2.bn3.bias torch.Size([1024])
+features.6.2.bn3.running_mean torch.Size([1024])
+features.6.2.bn3.running_var torch.Size([1024])
+features.6.2.bn3.num_batches_tracked torch.Size([])
+features.6.3.conv1.weight torch.Size([256, 1024, 1, 1])
+features.6.3.bn1.weight torch.Size([256])
+features.6.3.bn1.bias torch.Size([256])
+features.6.3.bn1.running_mean torch.Size([256])
+features.6.3.bn1.running_var torch.Size([256])
+features.6.3.bn1.num_batches_tracked torch.Size([])
+features.6.3.conv2.weight torch.Size([256, 256, 3, 3])
+features.6.3.bn2.weight torch.Size([256])
+features.6.3.bn2.bias torch.Size([256])
+features.6.3.bn2.running_mean torch.Size([256])
+features.6.3.bn2.running_var torch.Size([256])
+features.6.3.bn2.num_batches_tracked torch.Size([])
+features.6.3.conv3.weight torch.Size([1024, 256, 1, 1])
+features.6.3.bn3.weight torch.Size([1024])
+features.6.3.bn3.bias torch.Size([1024])
+features.6.3.bn3.running_mean torch.Size([1024])
+features.6.3.bn3.running_var torch.Size([1024])
+features.6.3.bn3.num_batches_tracked torch.Size([])
+features.6.4.conv1.weight torch.Size([256, 1024, 1, 1])
+features.6.4.bn1.weight torch.Size([256])
+features.6.4.bn1.bias torch.Size([256])
+features.6.4.bn1.running_mean torch.Size([256])
+features.6.4.bn1.running_var torch.Size([256])
+features.6.4.bn1.num_batches_tracked torch.Size([])
+features.6.4.conv2.weight torch.Size([256, 256, 3, 3])
+features.6.4.bn2.weight torch.Size([256])
+features.6.4.bn2.bias torch.Size([256])
+features.6.4.bn2.running_mean torch.Size([256])
+features.6.4.bn2.running_var torch.Size([256])
+features.6.4.bn2.num_batches_tracked torch.Size([])
+features.6.4.conv3.weight torch.Size([1024, 256, 1, 1])
+features.6.4.bn3.weight torch.Size([1024])
+features.6.4.bn3.bias torch.Size([1024])
+features.6.4.bn3.running_mean torch.Size([1024])
+features.6.4.bn3.running_var torch.Size([1024])
+features.6.4.bn3.num_batches_tracked torch.Size([])
+features.6.5.conv1.weight torch.Size([256, 1024, 1, 1])
+features.6.5.bn1.weight torch.Size([256])
+features.6.5.bn1.bias torch.Size([256])
+features.6.5.bn1.running_mean torch.Size([256])
+features.6.5.bn1.running_var torch.Size([256])
+features.6.5.bn1.num_batches_tracked torch.Size([])
+features.6.5.conv2.weight torch.Size([256, 256, 3, 3])
+features.6.5.bn2.weight torch.Size([256])
+features.6.5.bn2.bias torch.Size([256])
+features.6.5.bn2.running_mean torch.Size([256])
+features.6.5.bn2.running_var torch.Size([256])
+features.6.5.bn2.num_batches_tracked torch.Size([])
+features.6.5.conv3.weight torch.Size([1024, 256, 1, 1])
+features.6.5.bn3.weight torch.Size([1024])
+features.6.5.bn3.bias torch.Size([1024])
+features.6.5.bn3.running_mean torch.Size([1024])
+features.6.5.bn3.running_var torch.Size([1024])
+features.6.5.bn3.num_batches_tracked torch.Size([])
+features.7.0.conv1.weight torch.Size([512, 1024, 1, 1])
+features.7.0.bn1.weight torch.Size([512])
+features.7.0.bn1.bias torch.Size([512])
+features.7.0.bn1.running_mean torch.Size([512])
+features.7.0.bn1.running_var torch.Size([512])
+features.7.0.bn1.num_batches_tracked torch.Size([])
+features.7.0.conv2.weight torch.Size([512, 512, 3, 3])
+features.7.0.bn2.weight torch.Size([512])
+features.7.0.bn2.bias torch.Size([512])
+features.7.0.bn2.running_mean torch.Size([512])
+features.7.0.bn2.running_var torch.Size([512])
+features.7.0.bn2.num_batches_tracked torch.Size([])
+features.7.0.conv3.weight torch.Size([2048, 512, 1, 1])
+features.7.0.bn3.weight torch.Size([2048])
+features.7.0.bn3.bias torch.Size([2048])
+features.7.0.bn3.running_mean torch.Size([2048])
+features.7.0.bn3.running_var torch.Size([2048])
+features.7.0.bn3.num_batches_tracked torch.Size([])
+features.7.0.downsample.0.weight torch.Size([2048, 1024, 1, 1])
+features.7.0.downsample.1.weight torch.Size([2048])
+features.7.0.downsample.1.bias torch.Size([2048])
+features.7.0.downsample.1.running_mean torch.Size([2048])
+features.7.0.downsample.1.running_var torch.Size([2048])
+features.7.0.downsample.1.num_batches_tracked torch.Size([])
+features.7.1.conv1.weight torch.Size([512, 2048, 1, 1])
+features.7.1.bn1.weight torch.Size([512])
+features.7.1.bn1.bias torch.Size([512])
+features.7.1.bn1.running_mean torch.Size([512])
+features.7.1.bn1.running_var torch.Size([512])
+features.7.1.bn1.num_batches_tracked torch.Size([])
+features.7.1.conv2.weight torch.Size([512, 512, 3, 3])
+features.7.1.bn2.weight torch.Size([512])
+features.7.1.bn2.bias torch.Size([512])
+features.7.1.bn2.running_mean torch.Size([512])
+features.7.1.bn2.running_var torch.Size([512])
+features.7.1.bn2.num_batches_tracked torch.Size([])
+features.7.1.conv3.weight torch.Size([2048, 512, 1, 1])
+features.7.1.bn3.weight torch.Size([2048])
+features.7.1.bn3.bias torch.Size([2048])
+features.7.1.bn3.running_mean torch.Size([2048])
+features.7.1.bn3.running_var torch.Size([2048])
+features.7.1.bn3.num_batches_tracked torch.Size([])
+features.7.2.conv1.weight torch.Size([512, 2048, 1, 1])
+features.7.2.bn1.weight torch.Size([512])
+features.7.2.bn1.bias torch.Size([512])
+features.7.2.bn1.running_mean torch.Size([512])
+features.7.2.bn1.running_var torch.Size([512])
+features.7.2.bn1.num_batches_tracked torch.Size([])
+features.7.2.conv2.weight torch.Size([512, 512, 3, 3])
+features.7.2.bn2.weight torch.Size([512])
+features.7.2.bn2.bias torch.Size([512])
+features.7.2.bn2.running_mean torch.Size([512])
+features.7.2.bn2.running_var torch.Size([512])
+features.7.2.bn2.num_batches_tracked torch.Size([])
+features.7.2.conv3.weight torch.Size([2048, 512, 1, 1])
+features.7.2.bn3.weight torch.Size([2048])
+features.7.2.bn3.bias torch.Size([2048])
+features.7.2.bn3.running_mean torch.Size([2048])
+features.7.2.bn3.running_var torch.Size([2048])
+features.7.2.bn3.num_batches_tracked torch.Size([])
+l1.weight torch.Size([2048, 2048])
+l1.bias torch.Size([2048])
+l2.weight torch.Size([2, 2048])
+l2.bias torch.Size([2])
+feature_extractor.conv1.weight torch.Size([64, 3, 7, 7])
+feature_extractor.bn1.weight torch.Size([64])
+feature_extractor.bn1.bias torch.Size([64])
+feature_extractor.bn1.running_mean torch.Size([64])
+feature_extractor.bn1.running_var torch.Size([64])
+feature_extractor.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer1.0.conv1.weight torch.Size([64, 64, 1, 1])
+feature_extractor.layer1.0.bn1.weight torch.Size([64])
+feature_extractor.layer1.0.bn1.bias torch.Size([64])
+feature_extractor.layer1.0.bn1.running_mean torch.Size([64])
+feature_extractor.layer1.0.bn1.running_var torch.Size([64])
+feature_extractor.layer1.0.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer1.0.conv2.weight torch.Size([64, 64, 3, 3])
+feature_extractor.layer1.0.bn2.weight torch.Size([64])
+feature_extractor.layer1.0.bn2.bias torch.Size([64])
+feature_extractor.layer1.0.bn2.running_mean torch.Size([64])
+feature_extractor.layer1.0.bn2.running_var torch.Size([64])
+feature_extractor.layer1.0.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer1.0.conv3.weight torch.Size([256, 64, 1, 1])
+feature_extractor.layer1.0.bn3.weight torch.Size([256])
+feature_extractor.layer1.0.bn3.bias torch.Size([256])
+feature_extractor.layer1.0.bn3.running_mean torch.Size([256])
+feature_extractor.layer1.0.bn3.running_var torch.Size([256])
+feature_extractor.layer1.0.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer1.0.downsample.0.weight torch.Size([256, 64, 1, 1])
+feature_extractor.layer1.0.downsample.1.weight torch.Size([256])
+feature_extractor.layer1.0.downsample.1.bias torch.Size([256])
+feature_extractor.layer1.0.downsample.1.running_mean torch.Size([256])
+feature_extractor.layer1.0.downsample.1.running_var torch.Size([256])
+feature_extractor.layer1.0.downsample.1.num_batches_tracked torch.Size([])
+feature_extractor.layer1.1.conv1.weight torch.Size([64, 256, 1, 1])
+feature_extractor.layer1.1.bn1.weight torch.Size([64])
+feature_extractor.layer1.1.bn1.bias torch.Size([64])
+feature_extractor.layer1.1.bn1.running_mean torch.Size([64])
+feature_extractor.layer1.1.bn1.running_var torch.Size([64])
+feature_extractor.layer1.1.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer1.1.conv2.weight torch.Size([64, 64, 3, 3])
+feature_extractor.layer1.1.bn2.weight torch.Size([64])
+feature_extractor.layer1.1.bn2.bias torch.Size([64])
+feature_extractor.layer1.1.bn2.running_mean torch.Size([64])
+feature_extractor.layer1.1.bn2.running_var torch.Size([64])
+feature_extractor.layer1.1.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer1.1.conv3.weight torch.Size([256, 64, 1, 1])
+feature_extractor.layer1.1.bn3.weight torch.Size([256])
+feature_extractor.layer1.1.bn3.bias torch.Size([256])
+feature_extractor.layer1.1.bn3.running_mean torch.Size([256])
+feature_extractor.layer1.1.bn3.running_var torch.Size([256])
+feature_extractor.layer1.1.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer1.2.conv1.weight torch.Size([64, 256, 1, 1])
+feature_extractor.layer1.2.bn1.weight torch.Size([64])
+feature_extractor.layer1.2.bn1.bias torch.Size([64])
+feature_extractor.layer1.2.bn1.running_mean torch.Size([64])
+feature_extractor.layer1.2.bn1.running_var torch.Size([64])
+feature_extractor.layer1.2.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer1.2.conv2.weight torch.Size([64, 64, 3, 3])
+feature_extractor.layer1.2.bn2.weight torch.Size([64])
+feature_extractor.layer1.2.bn2.bias torch.Size([64])
+feature_extractor.layer1.2.bn2.running_mean torch.Size([64])
+feature_extractor.layer1.2.bn2.running_var torch.Size([64])
+feature_extractor.layer1.2.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer1.2.conv3.weight torch.Size([256, 64, 1, 1])
+feature_extractor.layer1.2.bn3.weight torch.Size([256])
+feature_extractor.layer1.2.bn3.bias torch.Size([256])
+feature_extractor.layer1.2.bn3.running_mean torch.Size([256])
+feature_extractor.layer1.2.bn3.running_var torch.Size([256])
+feature_extractor.layer1.2.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer2.0.conv1.weight torch.Size([128, 256, 1, 1])
+feature_extractor.layer2.0.bn1.weight torch.Size([128])
+feature_extractor.layer2.0.bn1.bias torch.Size([128])
+feature_extractor.layer2.0.bn1.running_mean torch.Size([128])
+feature_extractor.layer2.0.bn1.running_var torch.Size([128])
+feature_extractor.layer2.0.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer2.0.conv2.weight torch.Size([128, 128, 3, 3])
+feature_extractor.layer2.0.bn2.weight torch.Size([128])
+feature_extractor.layer2.0.bn2.bias torch.Size([128])
+feature_extractor.layer2.0.bn2.running_mean torch.Size([128])
+feature_extractor.layer2.0.bn2.running_var torch.Size([128])
+feature_extractor.layer2.0.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer2.0.conv3.weight torch.Size([512, 128, 1, 1])
+feature_extractor.layer2.0.bn3.weight torch.Size([512])
+feature_extractor.layer2.0.bn3.bias torch.Size([512])
+feature_extractor.layer2.0.bn3.running_mean torch.Size([512])
+feature_extractor.layer2.0.bn3.running_var torch.Size([512])
+feature_extractor.layer2.0.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer2.0.downsample.0.weight torch.Size([512, 256, 1, 1])
+feature_extractor.layer2.0.downsample.1.weight torch.Size([512])
+feature_extractor.layer2.0.downsample.1.bias torch.Size([512])
+feature_extractor.layer2.0.downsample.1.running_mean torch.Size([512])
+feature_extractor.layer2.0.downsample.1.running_var torch.Size([512])
+feature_extractor.layer2.0.downsample.1.num_batches_tracked torch.Size([])
+feature_extractor.layer2.1.conv1.weight torch.Size([128, 512, 1, 1])
+feature_extractor.layer2.1.bn1.weight torch.Size([128])
+feature_extractor.layer2.1.bn1.bias torch.Size([128])
+feature_extractor.layer2.1.bn1.running_mean torch.Size([128])
+feature_extractor.layer2.1.bn1.running_var torch.Size([128])
+feature_extractor.layer2.1.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer2.1.conv2.weight torch.Size([128, 128, 3, 3])
+feature_extractor.layer2.1.bn2.weight torch.Size([128])
+feature_extractor.layer2.1.bn2.bias torch.Size([128])
+feature_extractor.layer2.1.bn2.running_mean torch.Size([128])
+feature_extractor.layer2.1.bn2.running_var torch.Size([128])
+feature_extractor.layer2.1.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer2.1.conv3.weight torch.Size([512, 128, 1, 1])
+feature_extractor.layer2.1.bn3.weight torch.Size([512])
+feature_extractor.layer2.1.bn3.bias torch.Size([512])
+feature_extractor.layer2.1.bn3.running_mean torch.Size([512])
+feature_extractor.layer2.1.bn3.running_var torch.Size([512])
+feature_extractor.layer2.1.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer2.2.conv1.weight torch.Size([128, 512, 1, 1])
+feature_extractor.layer2.2.bn1.weight torch.Size([128])
+feature_extractor.layer2.2.bn1.bias torch.Size([128])
+feature_extractor.layer2.2.bn1.running_mean torch.Size([128])
+feature_extractor.layer2.2.bn1.running_var torch.Size([128])
+feature_extractor.layer2.2.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer2.2.conv2.weight torch.Size([128, 128, 3, 3])
+feature_extractor.layer2.2.bn2.weight torch.Size([128])
+feature_extractor.layer2.2.bn2.bias torch.Size([128])
+feature_extractor.layer2.2.bn2.running_mean torch.Size([128])
+feature_extractor.layer2.2.bn2.running_var torch.Size([128])
+feature_extractor.layer2.2.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer2.2.conv3.weight torch.Size([512, 128, 1, 1])
+feature_extractor.layer2.2.bn3.weight torch.Size([512])
+feature_extractor.layer2.2.bn3.bias torch.Size([512])
+feature_extractor.layer2.2.bn3.running_mean torch.Size([512])
+feature_extractor.layer2.2.bn3.running_var torch.Size([512])
+feature_extractor.layer2.2.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer2.3.conv1.weight torch.Size([128, 512, 1, 1])
+feature_extractor.layer2.3.bn1.weight torch.Size([128])
+feature_extractor.layer2.3.bn1.bias torch.Size([128])
+feature_extractor.layer2.3.bn1.running_mean torch.Size([128])
+feature_extractor.layer2.3.bn1.running_var torch.Size([128])
+feature_extractor.layer2.3.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer2.3.conv2.weight torch.Size([128, 128, 3, 3])
+feature_extractor.layer2.3.bn2.weight torch.Size([128])
+feature_extractor.layer2.3.bn2.bias torch.Size([128])
+feature_extractor.layer2.3.bn2.running_mean torch.Size([128])
+feature_extractor.layer2.3.bn2.running_var torch.Size([128])
+feature_extractor.layer2.3.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer2.3.conv3.weight torch.Size([512, 128, 1, 1])
+feature_extractor.layer2.3.bn3.weight torch.Size([512])
+feature_extractor.layer2.3.bn3.bias torch.Size([512])
+feature_extractor.layer2.3.bn3.running_mean torch.Size([512])
+feature_extractor.layer2.3.bn3.running_var torch.Size([512])
+feature_extractor.layer2.3.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer3.0.conv1.weight torch.Size([256, 512, 1, 1])
+feature_extractor.layer3.0.bn1.weight torch.Size([256])
+feature_extractor.layer3.0.bn1.bias torch.Size([256])
+feature_extractor.layer3.0.bn1.running_mean torch.Size([256])
+feature_extractor.layer3.0.bn1.running_var torch.Size([256])
+feature_extractor.layer3.0.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.0.conv2.weight torch.Size([256, 256, 3, 3])
+feature_extractor.layer3.0.bn2.weight torch.Size([256])
+feature_extractor.layer3.0.bn2.bias torch.Size([256])
+feature_extractor.layer3.0.bn2.running_mean torch.Size([256])
+feature_extractor.layer3.0.bn2.running_var torch.Size([256])
+feature_extractor.layer3.0.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer3.0.conv3.weight torch.Size([1024, 256, 1, 1])
+feature_extractor.layer3.0.bn3.weight torch.Size([1024])
+feature_extractor.layer3.0.bn3.bias torch.Size([1024])
+feature_extractor.layer3.0.bn3.running_mean torch.Size([1024])
+feature_extractor.layer3.0.bn3.running_var torch.Size([1024])
+feature_extractor.layer3.0.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer3.0.downsample.0.weight torch.Size([1024, 512, 1, 1])
+feature_extractor.layer3.0.downsample.1.weight torch.Size([1024])
+feature_extractor.layer3.0.downsample.1.bias torch.Size([1024])
+feature_extractor.layer3.0.downsample.1.running_mean torch.Size([1024])
+feature_extractor.layer3.0.downsample.1.running_var torch.Size([1024])
+feature_extractor.layer3.0.downsample.1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.1.conv1.weight torch.Size([256, 1024, 1, 1])
+feature_extractor.layer3.1.bn1.weight torch.Size([256])
+feature_extractor.layer3.1.bn1.bias torch.Size([256])
+feature_extractor.layer3.1.bn1.running_mean torch.Size([256])
+feature_extractor.layer3.1.bn1.running_var torch.Size([256])
+feature_extractor.layer3.1.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.1.conv2.weight torch.Size([256, 256, 3, 3])
+feature_extractor.layer3.1.bn2.weight torch.Size([256])
+feature_extractor.layer3.1.bn2.bias torch.Size([256])
+feature_extractor.layer3.1.bn2.running_mean torch.Size([256])
+feature_extractor.layer3.1.bn2.running_var torch.Size([256])
+feature_extractor.layer3.1.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer3.1.conv3.weight torch.Size([1024, 256, 1, 1])
+feature_extractor.layer3.1.bn3.weight torch.Size([1024])
+feature_extractor.layer3.1.bn3.bias torch.Size([1024])
+feature_extractor.layer3.1.bn3.running_mean torch.Size([1024])
+feature_extractor.layer3.1.bn3.running_var torch.Size([1024])
+feature_extractor.layer3.1.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer3.2.conv1.weight torch.Size([256, 1024, 1, 1])
+feature_extractor.layer3.2.bn1.weight torch.Size([256])
+feature_extractor.layer3.2.bn1.bias torch.Size([256])
+feature_extractor.layer3.2.bn1.running_mean torch.Size([256])
+feature_extractor.layer3.2.bn1.running_var torch.Size([256])
+feature_extractor.layer3.2.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.2.conv2.weight torch.Size([256, 256, 3, 3])
+feature_extractor.layer3.2.bn2.weight torch.Size([256])
+feature_extractor.layer3.2.bn2.bias torch.Size([256])
+feature_extractor.layer3.2.bn2.running_mean torch.Size([256])
+feature_extractor.layer3.2.bn2.running_var torch.Size([256])
+feature_extractor.layer3.2.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer3.2.conv3.weight torch.Size([1024, 256, 1, 1])
+feature_extractor.layer3.2.bn3.weight torch.Size([1024])
+feature_extractor.layer3.2.bn3.bias torch.Size([1024])
+feature_extractor.layer3.2.bn3.running_mean torch.Size([1024])
+feature_extractor.layer3.2.bn3.running_var torch.Size([1024])
+feature_extractor.layer3.2.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer3.3.conv1.weight torch.Size([256, 1024, 1, 1])
+feature_extractor.layer3.3.bn1.weight torch.Size([256])
+feature_extractor.layer3.3.bn1.bias torch.Size([256])
+feature_extractor.layer3.3.bn1.running_mean torch.Size([256])
+feature_extractor.layer3.3.bn1.running_var torch.Size([256])
+feature_extractor.layer3.3.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.3.conv2.weight torch.Size([256, 256, 3, 3])
+feature_extractor.layer3.3.bn2.weight torch.Size([256])
+feature_extractor.layer3.3.bn2.bias torch.Size([256])
+feature_extractor.layer3.3.bn2.running_mean torch.Size([256])
+feature_extractor.layer3.3.bn2.running_var torch.Size([256])
+feature_extractor.layer3.3.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer3.3.conv3.weight torch.Size([1024, 256, 1, 1])
+feature_extractor.layer3.3.bn3.weight torch.Size([1024])
+feature_extractor.layer3.3.bn3.bias torch.Size([1024])
+feature_extractor.layer3.3.bn3.running_mean torch.Size([1024])
+feature_extractor.layer3.3.bn3.running_var torch.Size([1024])
+feature_extractor.layer3.3.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer3.4.conv1.weight torch.Size([256, 1024, 1, 1])
+feature_extractor.layer3.4.bn1.weight torch.Size([256])
+feature_extractor.layer3.4.bn1.bias torch.Size([256])
+feature_extractor.layer3.4.bn1.running_mean torch.Size([256])
+feature_extractor.layer3.4.bn1.running_var torch.Size([256])
+feature_extractor.layer3.4.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.4.conv2.weight torch.Size([256, 256, 3, 3])
+feature_extractor.layer3.4.bn2.weight torch.Size([256])
+feature_extractor.layer3.4.bn2.bias torch.Size([256])
+feature_extractor.layer3.4.bn2.running_mean torch.Size([256])
+feature_extractor.layer3.4.bn2.running_var torch.Size([256])
+feature_extractor.layer3.4.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer3.4.conv3.weight torch.Size([1024, 256, 1, 1])
+feature_extractor.layer3.4.bn3.weight torch.Size([1024])
+feature_extractor.layer3.4.bn3.bias torch.Size([1024])
+feature_extractor.layer3.4.bn3.running_mean torch.Size([1024])
+feature_extractor.layer3.4.bn3.running_var torch.Size([1024])
+feature_extractor.layer3.4.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer3.5.conv1.weight torch.Size([256, 1024, 1, 1])
+feature_extractor.layer3.5.bn1.weight torch.Size([256])
+feature_extractor.layer3.5.bn1.bias torch.Size([256])
+feature_extractor.layer3.5.bn1.running_mean torch.Size([256])
+feature_extractor.layer3.5.bn1.running_var torch.Size([256])
+feature_extractor.layer3.5.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer3.5.conv2.weight torch.Size([256, 256, 3, 3])
+feature_extractor.layer3.5.bn2.weight torch.Size([256])
+feature_extractor.layer3.5.bn2.bias torch.Size([256])
+feature_extractor.layer3.5.bn2.running_mean torch.Size([256])
+feature_extractor.layer3.5.bn2.running_var torch.Size([256])
+feature_extractor.layer3.5.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer3.5.conv3.weight torch.Size([1024, 256, 1, 1])
+feature_extractor.layer3.5.bn3.weight torch.Size([1024])
+feature_extractor.layer3.5.bn3.bias torch.Size([1024])
+feature_extractor.layer3.5.bn3.running_mean torch.Size([1024])
+feature_extractor.layer3.5.bn3.running_var torch.Size([1024])
+feature_extractor.layer3.5.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer4.0.conv1.weight torch.Size([512, 1024, 1, 1])
+feature_extractor.layer4.0.bn1.weight torch.Size([512])
+feature_extractor.layer4.0.bn1.bias torch.Size([512])
+feature_extractor.layer4.0.bn1.running_mean torch.Size([512])
+feature_extractor.layer4.0.bn1.running_var torch.Size([512])
+feature_extractor.layer4.0.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer4.0.conv2.weight torch.Size([512, 512, 3, 3])
+feature_extractor.layer4.0.bn2.weight torch.Size([512])
+feature_extractor.layer4.0.bn2.bias torch.Size([512])
+feature_extractor.layer4.0.bn2.running_mean torch.Size([512])
+feature_extractor.layer4.0.bn2.running_var torch.Size([512])
+feature_extractor.layer4.0.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer4.0.conv3.weight torch.Size([2048, 512, 1, 1])
+feature_extractor.layer4.0.bn3.weight torch.Size([2048])
+feature_extractor.layer4.0.bn3.bias torch.Size([2048])
+feature_extractor.layer4.0.bn3.running_mean torch.Size([2048])
+feature_extractor.layer4.0.bn3.running_var torch.Size([2048])
+feature_extractor.layer4.0.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer4.0.downsample.0.weight torch.Size([2048, 1024, 1, 1])
+feature_extractor.layer4.0.downsample.1.weight torch.Size([2048])
+feature_extractor.layer4.0.downsample.1.bias torch.Size([2048])
+feature_extractor.layer4.0.downsample.1.running_mean torch.Size([2048])
+feature_extractor.layer4.0.downsample.1.running_var torch.Size([2048])
+feature_extractor.layer4.0.downsample.1.num_batches_tracked torch.Size([])
+feature_extractor.layer4.1.conv1.weight torch.Size([512, 2048, 1, 1])
+feature_extractor.layer4.1.bn1.weight torch.Size([512])
+feature_extractor.layer4.1.bn1.bias torch.Size([512])
+feature_extractor.layer4.1.bn1.running_mean torch.Size([512])
+feature_extractor.layer4.1.bn1.running_var torch.Size([512])
+feature_extractor.layer4.1.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer4.1.conv2.weight torch.Size([512, 512, 3, 3])
+feature_extractor.layer4.1.bn2.weight torch.Size([512])
+feature_extractor.layer4.1.bn2.bias torch.Size([512])
+feature_extractor.layer4.1.bn2.running_mean torch.Size([512])
+feature_extractor.layer4.1.bn2.running_var torch.Size([512])
+feature_extractor.layer4.1.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer4.1.conv3.weight torch.Size([2048, 512, 1, 1])
+feature_extractor.layer4.1.bn3.weight torch.Size([2048])
+feature_extractor.layer4.1.bn3.bias torch.Size([2048])
+feature_extractor.layer4.1.bn3.running_mean torch.Size([2048])
+feature_extractor.layer4.1.bn3.running_var torch.Size([2048])
+feature_extractor.layer4.1.bn3.num_batches_tracked torch.Size([])
+feature_extractor.layer4.2.conv1.weight torch.Size([512, 2048, 1, 1])
+feature_extractor.layer4.2.bn1.weight torch.Size([512])
+feature_extractor.layer4.2.bn1.bias torch.Size([512])
+feature_extractor.layer4.2.bn1.running_mean torch.Size([512])
+feature_extractor.layer4.2.bn1.running_var torch.Size([512])
+feature_extractor.layer4.2.bn1.num_batches_tracked torch.Size([])
+feature_extractor.layer4.2.conv2.weight torch.Size([512, 512, 3, 3])
+feature_extractor.layer4.2.bn2.weight torch.Size([512])
+feature_extractor.layer4.2.bn2.bias torch.Size([512])
+feature_extractor.layer4.2.bn2.running_mean torch.Size([512])
+feature_extractor.layer4.2.bn2.running_var torch.Size([512])
+feature_extractor.layer4.2.bn2.num_batches_tracked torch.Size([])
+feature_extractor.layer4.2.conv3.weight torch.Size([2048, 512, 1, 1])
+feature_extractor.layer4.2.bn3.weight torch.Size([2048])
+feature_extractor.layer4.2.bn3.bias torch.Size([2048])
+feature_extractor.layer4.2.bn3.running_mean torch.Size([2048])
+feature_extractor.layer4.2.bn3.running_var torch.Size([2048])
+feature_extractor.layer4.2.bn3.num_batches_tracked torch.Size([])
+l1.weight torch.Size([2048, 2048])
+l1.bias torch.Size([2048])
+fc.weight torch.Size([2, 2048])
+fc.bias torch.Size([2])
+['/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD189-DLB-Striatum-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD102-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD144_EntCx_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD17_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD60-DLB-Amygdala-C34-45-001_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD158_C110-115_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD13_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD226-DLB--Amygdala-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD125_C110-115_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD13_Amygdala_C110-115 David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD118-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD89-DLB--Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD97_Amygdala_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD158_C110-115_Amygdala David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD159_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD102_EntCx_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD158_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD17_EntCx_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD17_Amygdala_C110-115 David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD140_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD189-DLB--Amygdala-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD89-DLB-Amygdala-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD133-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD152-DLB-Striatum-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD102_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD131_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD97_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD189-DLB-C34-45-EntCx-Hippo_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD131_C110-115_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD195-DLB--Amygdala-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD189-DLB-EntCx-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD171_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD130-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD60-DLB--Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD144_Amygdala_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD152-DLB-EntCx-AnteriorHippo-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD159-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD195-DLB--Amygdala-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD151-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD17_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD131-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD158-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD159-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD097-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD152-DLB-Amygdala-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD163-DLB-EntCx-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD226-DLB-Amygdala-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD226-DLB-EntCx-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD171-Striatum-C110-C115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD195-DLB-EntCx-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD89-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD171_C110-115_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD133_C110-115_Amygdala David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD118-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD130_C110-115_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD144_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD131_C110-115_EntCx David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD60-DLB-Amygdala-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD171_C110-115_Amygdala David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD163-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD17-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD134-DLB--EntCx-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD17-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD131_C110-115_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD189-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD97_EntCx_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD130_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD133_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD140_Amygdala_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD131-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD125_C110-115_EntCx David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD130-C34-45-Striatum_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD102_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD134-DLB--Amygdala-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD97-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD159_C110-115_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD118_C110-115_Amygdala-001_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD125_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD130_C110-115_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD134-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD133-Striatum-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD171_C110-115_EntCx David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD60-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD226-DLB-Striatum-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD144_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD60-DLB-Amygdala-C34-45-002_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD152-DLB--Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD151_EntCx_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD163-DLB-Amygdala-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD13-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD102--Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/DLB-PD189-C34-45-Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-PD158-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD89-DLB-Striatum-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD140_EntCx_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD151_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD151_C34-45_Amygdala_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD195-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PDD-125-Striatum-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD97_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD158_C110-115_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD151_Amygdala_C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD226-DLB--EntCx-C110-115_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD159_C110-115_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD158_C110-115_EntCx David Menassa_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD134-DLB-Striatum-C34-45_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD133_C34-45_EntCx_files/20.0', '/gladstone/finkbeiner/steve/work/data/npsad_data/monika/Antibodies_detection/codes/tmi2022/antibodies_data/tiled_slide/PD102_Amygdala_C110-115_files/20.0']
+5003
+5003 files to be processed: PD189-DLB-Striatum-C34-45
+ Computed: 1/108
+2857
+2857 files to be processed: PD102-C34-45-Striatum
+ Computed: 2/108
+5874
+5874 files to be processed: PD144_EntCx_C110-115
+ Computed: 3/108
+4261
+4261 files to be processed: PD17_C34-45_Amygdala
+ Computed: 4/108
+3807
+3807 files to be processed: PD60-DLB-Amygdala-C34-45-001
+ Computed: 5/108
+8276
+8276 files to be processed: PD158_C110-115_Amygdala
+ Computed: 6/108
+3039
+3039 files to be processed: PD13_C34-45_Amygdala
+ Computed: 7/108
+5922
+5922 files to be processed: PD226-DLB--Amygdala-C110-115
+ Computed: 8/108
+5697
+5697 files to be processed: PD125_C110-115_Amygdala
+ Computed: 9/108
+2787
+2787 files to be processed: PD13_Amygdala_C110-115 David Menassa
+ Computed: 10/108
+2070
+2070 files to be processed: PD118-C34-45-Striatum
+ Computed: 11/108
+1990
+1990 files to be processed: PD89-DLB--Striatum-C110-115
+ Computed: 12/108
+4841
+4841 files to be processed: PD97_Amygdala_C110-115
+ Computed: 13/108
+8276
+8276 files to be processed: PD158_C110-115_Amygdala David Menassa
+ Computed: 14/108
+6210
+6210 files to be processed: PD159_C34-45_Amygdala
+ Computed: 15/108
+3929
+3929 files to be processed: PD102_EntCx_C110-115
+ Computed: 16/108
+4928
+4928 files to be processed: PD158_C34-45_EntCx
+ Computed: 17/108
+4066
+4066 files to be processed: PD17_EntCx_C110-115
+ Computed: 18/108
+4195
+4195 files to be processed: PD17_Amygdala_C110-115 David Menassa
+ Computed: 19/108
+4133
+4133 files to be processed: PD140_C34-45_EntCx
+ Computed: 20/108
+4935
+4935 files to be processed: PD189-DLB--Amygdala-C110-115
+ Computed: 21/108
+4613
+4613 files to be processed: PD89-DLB-Amygdala-C34-45
+ Computed: 22/108
+1524
+1524 files to be processed: PDD-PD133-Striatum-C110-115
+ Computed: 23/108
+2616
+2616 files to be processed: PD152-DLB-Striatum-C34-45
+ Computed: 24/108
+3703
+3703 files to be processed: PD102_C34-45_EntCx
+ Computed: 25/108
+4237
+4237 files to be processed: PD131_C34-45_Amygdala
+ Computed: 26/108
+4875
+4875 files to be processed: PD97_C34-45_Amygdala
+ Computed: 27/108
+4319
+4319 files to be processed: PD189-DLB-C34-45-EntCx-Hippo
+ Computed: 28/108
+3725
+3725 files to be processed: PD131_C110-115_EntCx
+ Computed: 29/108
+3253
+3253 files to be processed: PD195-DLB--Amygdala-C34-45
+ Computed: 30/108
+4448
+4448 files to be processed: PD189-DLB-EntCx-C34-45
+ Computed: 31/108
+5554
+5554 files to be processed: PD171_C34-45_Amygdala
+ Computed: 32/108
+4204
+4204 files to be processed: PDD-PD130-Striatum-C110-115
+ Computed: 33/108
+2476
+2476 files to be processed: PD60-DLB--Striatum-C110-115
+ Computed: 34/108
+3188
+3188 files to be processed: PD144_Amygdala_C110-115
+ Computed: 35/108
+5675
+5675 files to be processed: PD152-DLB-EntCx-AnteriorHippo-C34-45
+ Computed: 36/108
+3481
+3481 files to be processed: PDD-PD159-Striatum-C110-115
+ Computed: 37/108
+3144
+3144 files to be processed: PD195-DLB--Amygdala-C110-115
+ Computed: 38/108
+2651
+2651 files to be processed: PDD-PD151-Striatum-C110-115
+ Computed: 39/108
+3427
+3427 files to be processed: PD17_C34-45_EntCx
+ Computed: 40/108
+3192
+3192 files to be processed: PD131-C34-45-Striatum
+ Computed: 41/108
+2507
+2507 files to be processed: PD158-C34-45-Striatum
+ Computed: 42/108
+3432
+3432 files to be processed: PD159-C34-45-Striatum
+ Computed: 43/108
+2206
+2206 files to be processed: PD097-C34-45-Striatum
+ Computed: 44/108
+3817
+3817 files to be processed: PD152-DLB-Amygdala-C34-45
+ Computed: 45/108
+3009
+3009 files to be processed: PD163-DLB-EntCx-C34-45
+ Computed: 46/108
+5953
+5953 files to be processed: PD226-DLB-Amygdala-C34-45
+ Computed: 47/108
+4818
+4818 files to be processed: PD226-DLB-EntCx-C34-45
+ Computed: 48/108
+5442
+5442 files to be processed: PDD-PD171-Striatum-C110-C115
+ Computed: 49/108
+4269
+4269 files to be processed: PD195-DLB-EntCx-C34-45
+ Computed: 50/108
+4483
+4483 files to be processed: PD89-DLB--EntCx-C110-115
+ Computed: 51/108
+4546
+4546 files to be processed: PD171_C110-115_Amygdala
+ Computed: 52/108
+2953
+2953 files to be processed: PD133_C110-115_Amygdala David Menassa
+ Computed: 53/108
+2023
+2023 files to be processed: PDD-PD118-Striatum-C110-115
+ Computed: 54/108
+4888
+4888 files to be processed: PD130_C110-115_EntCx
+ Computed: 55/108
+3236
+3236 files to be processed: PD144_C34-45_Amygdala
+ Computed: 56/108
+3725
+3725 files to be processed: PD131_C110-115_EntCx David Menassa
+ Computed: 57/108
+3505
+3505 files to be processed: PD60-DLB-Amygdala-C34-45
+ Computed: 58/108
+4546
+4546 files to be processed: PD171_C110-115_Amygdala David Menassa
+ Computed: 59/108
+2681
+2681 files to be processed: PD163-DLB--EntCx-C110-115
+ Computed: 60/108
+1294
+1294 files to be processed: PDD-PD17-Striatum-C110-115
+ Computed: 61/108
+3501
+3501 files to be processed: PD134-DLB--EntCx-C34-45
+ Computed: 62/108
+1230
+1230 files to be processed: PD17-C34-45-Striatum
+ Computed: 63/108
+4301
+4301 files to be processed: PD131_C110-115_Amygdala
+ Computed: 64/108
+4158
+4158 files to be processed: PD189-DLB--EntCx-C110-115
+ Computed: 65/108
+5925
+5925 files to be processed: PD97_EntCx_C110-115
+ Computed: 66/108
+3944
+3944 files to be processed: PD130_C34-45_Amygdala
+ Computed: 67/108
+2969
+2969 files to be processed: PD133_C34-45_Amygdala
+ Computed: 68/108
+4982
+4982 files to be processed: PD140_Amygdala_C110-115
+ Computed: 69/108
+2910
+2910 files to be processed: PDD-PD131-Striatum-C110-115
+ Computed: 70/108
+2803
+2803 files to be processed: PD125_C110-115_EntCx David Menassa
+ Computed: 71/108
+4506
+4506 files to be processed: PD130-C34-45-Striatum
+ Computed: 72/108
+4766
+4766 files to be processed: PD102_C34-45_Amygdala
+ Computed: 73/108
+3303
+3303 files to be processed: PD134-DLB--Amygdala-C110-115
+ Computed: 74/108
+2148
+2148 files to be processed: PDD-PD97-Striatum-C110-115
+ Computed: 75/108
+6741
+6741 files to be processed: PD159_C110-115_Amygdala
+ Computed: 76/108
+2335
+2335 files to be processed: PD118_C110-115_Amygdala-001
+ Computed: 77/108
+2917
+2917 files to be processed: PD125_C34-45_EntCx
+ Computed: 78/108
+4408
+4408 files to be processed: PD130_C110-115_Amygdala
+ Computed: 79/108
+3033
+3033 files to be processed: PD134-DLB--EntCx-C110-115
+ Computed: 80/108
+1901
+1901 files to be processed: PD133-Striatum-C34-45
+ Computed: 81/108
+6022
+6022 files to be processed: PD171_C110-115_EntCx David Menassa
+ Computed: 82/108
+2738
+2738 files to be processed: PD60-DLB--EntCx-C110-115
+ Computed: 83/108
+4506
+4506 files to be processed: PD226-DLB-Striatum-C34-45
+ Computed: 84/108
+6042
+6042 files to be processed: PD144_C34-45_EntCx
+ Computed: 85/108
+2825
+2825 files to be processed: PD60-DLB-Amygdala-C34-45-002
+ Computed: 86/108
+2515
+2515 files to be processed: PD152-DLB--Striatum-C110-115
+ Computed: 87/108
+5211
+5211 files to be processed: PD151_EntCx_C110-115
+ Computed: 88/108
+6557
+6557 files to be processed: PD163-DLB-Amygdala-C34-45
+ Computed: 89/108
+1973
+1973 files to be processed: PDD-PD13-Striatum-C110-115
+ Computed: 90/108
+2650
+2650 files to be processed: PDD-PD102--Striatum-C110-115
+ Computed: 91/108
+5036
+5036 files to be processed: DLB-PD189-C34-45-Amygdala
+ Computed: 92/108
+2186
+2186 files to be processed: PDD-PD158-Striatum-C110-115
+ Computed: 93/108
+2213
+2213 files to be processed: PD89-DLB-Striatum-C34-45
+ Computed: 94/108
+3618
+3618 files to be processed: PD140_EntCx_C110-115
+ Computed: 95/108
+5413
+5413 files to be processed: PD151_C34-45_EntCx
+ Computed: 96/108
+4976
+4976 files to be processed: PD151_C34-45_Amygdala
+ Computed: 97/108
+3566
+3566 files to be processed: PD195-DLB--EntCx-C110-115
+ Computed: 98/108
+2069
+2069 files to be processed: PDD-125-Striatum-C110-115
+ Computed: 99/108
+5472
+5472 files to be processed: PD97_C34-45_EntCx
+ Computed: 100/108
+4842
+4842 files to be processed: PD158_C110-115_EntCx
+ Computed: 101/108
+4732
+4732 files to be processed: PD151_Amygdala_C110-115
+ Computed: 102/108
+4581
+4581 files to be processed: PD226-DLB--EntCx-C110-115
+ Computed: 103/108
+6329
+6329 files to be processed: PD159_C110-115_EntCx
+ Computed: 104/108
+4842
+4842 files to be processed: PD158_C110-115_EntCx David Menassa
+ Computed: 105/108
+1560
+1560 files to be processed: PD134-DLB-Striatum-C34-45
+ Computed: 106/108
+6297
+6297 files to be processed: PD133_C34-45_EntCx
+ Computed: 107/108
+4840
+4840 files to be processed: PD102_Amygdala_C110-115
+ Computed: 108/108
