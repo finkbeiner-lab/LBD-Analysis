@@ -1,0 +1,46 @@
+
+from PIL import Image
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+def imshow(inp, title=None):
+    """Imshow for Tensor."""
+    inp = inp.squeeze()
+    print(inp.shape)
+    #inp = inp.numpy().transpose((0, 3, 2, 1))
+    inp = inp.numpy().transpose((1, 2, 0))
+    
+    print(inp.shape)
+    mean = np.array([0.8965, 0.8875, 0.9023])
+    std = np.array([0.0807, 0.0911, 0.0849])
+    #mean = np.array([0.485, 0.456, 0.406])
+    #std = np.array([0.229, 0.224, 0.225])
+    inp = std * inp + mean
+    inp = np.clip(inp, 0, 1)
+    plt.imshow(inp)
+    if title is not None:
+        plt.title(title)
+    plt.pause(0.001)  # pause a bit so that plots are updated
+
+
+
+def tensor_2_img(inp):
+    """Imshow for Tensor."""
+    inp = inp.squeeze(0)
+    print(inp.shape)
+    #inp = inp.numpy().transpose((0, 3, 2, 1))
+    inp = inp.cpu().numpy().transpose((1, 2, 0))
+    
+    print(inp.shape)
+    mean = np.array([0.8965, 0.8875, 0.9023])
+    std = np.array([0.0807, 0.0911, 0.0849])
+    #mean = np.array([0.485, 0.456, 0.406])
+    #std = np.array([0.229, 0.224, 0.225])
+    inp = std * inp + mean
+    inp = np.clip(inp, 0, 1)
+    return Image.fromarray((inp).astype(np.uint8))
+
+
+
