@@ -1,0 +1,204 @@
+import os
+os.environ['OMP_NUM_THREADS'] = '1'
+
+import sys
+sys.path.append(os.path.join(os.getcwd(), *tuple(['..'])))
+import argparse
+
+from typing import Callable, Dict, List, Optional, Set
+from collections import OrderedDict
+import pdb
+import numpy as np
+import torch
+from torch import nn, Tensor
+import torch.optim
+import wandb
+from model_mrcnn import _default_mrcnn_config, build_default
+from features import build_features
+from features import transforms as T
+from utils.engine import evaluate
+import torchvision
+import matplotlib.pyplot as plt
+from visualization.explain import ExplainPredictions
+import pandas as pd
+import plotly.graph_objects as go
+import pdb
+from sklearn.metrics import precision_recall_curve, auc
+
+
+# def testmodel():
+def plotPRcurve(eval2, epoch, run, patient_id):
+
+    df = pd.DataFrame(columns=["class","tpr","fpr","recall","precision"])
+    #len_classes = 2 ## Assuming 3 classes
+    colors={"True":'royalblue', "Pre":'firebrick','False':"green"}
+    classes = ['True', 'Pre']
+    
+
+    len_classes = len(eval2['bbox'])
+    print(len_classes)
+
+    random_rp_dict=dict()
+    for c in range(len_classes): # running for all 3 classes
+        ## parameters
+        area_index = 0 # area - all (areaRng = [[0 ** 2, 1e5 ** 2], [0 ** 2, 32 ** 2], [32 ** 2, 96 ** 2], [96 ** 2, 1e5 ** 2]]  -> areaRngLbl = ['all', 'small', 'medium', 'large'])
+        threshold_index= 0 # threshold 0.5  (iouThrs = np.linspace(.5, 0.95, int(np.round((0.95 - .5) / .05)) + 1, endpoint=True)) -- can vary threshold from here 
+        iou_type="bbox"
+        maxDet = 100 
+        # Selecting from 
+        eval_table = eval2[iou_type][c][area_index]
+
+        dt_score_list = np.concatenate([eval_table[i]['dtScores'][0:maxDet] for i in range(len(eval_table)) if eval_table[i]!=None])
+        inds = np.argsort(-dt_score_list, kind='mergesort') 
+        dtScoresSorted = dt_score_list[inds]
+        dtm  = np.concatenate([eval_table[i]['dtMatches'][threshold_index][0:maxDet]  for i in range(len(eval_table)) if eval_table[i]!=None]) [inds]
+        dtIg  = np.concatenate([eval_table[i]['dtIgnore'][threshold_index][0:maxDet]  for i in range(len(eval_table)) if eval_table[i]!=None]) [inds]
+        gtIg = np.concatenate([eval_table[i]['gtIgnore'] for i in range(len(eval_table)) if eval_table[i]!=None])
+        npig = np.count_nonzero(gtIg==0)
+        tps = np.logical_and(               dtm,  np.logical_not(dtIg) )
+        fps = np.logical_and(np.logical_not(dtm), np.logical_not(dtIg) )
+        tp_sum = np.cumsum(tps, axis=0, dtype=float)
+        
+
+        if len(tp_sum) == 0:
+            continue
+        
+        # rp =tp_sum[-1]/len(tp_sum)
+        # random_rp_dict[c]=rp
+        # tp_sum=tp_sum/tp_sum[-1]
+        fp_sum = np.cumsum(fps, axis=0, dtype=float)
+        # fp_sum=fp_sum/fp_sum[-1]
+        rc_list =[]
+        pr_list =[]
+        for t, (tp, fp) in enumerate(zip(tp_sum, fp_sum)):
+            rc = tp / npig
+            pr = tp / (fp+tp+np.spacing(1))
+            rc_list.append(rc)
+            pr_list.append(pr)
+        tmp = pd.DataFrame({"tpr":tp_sum,"fpr":fp_sum,"recall":rc_list,"precision":pr_list})
+        tmp["class"] = c
+        df = pd.concat([df, tmp])
+    print(df)
+
+
+
+    # plotly plot
+    fig = go.Figure()
+    fig.add_shape(
+        type='line', line=dict(dash='dash'),
+        x0=0, x1=1, y0=0, y1=1
+    )
+    
+    class_auc_pr = {}
+
+    for i in range(len(classes)):
+        fig.add_trace(go.Scatter(x=df[df["class"]==i]["recall"], y=df[df["class"]==i]["precision"], name=classes[i], mode='lines', line=dict(color=colors[classes[i]])))
+
+        #pdb.set_trace()
+        precision = df[df["class"]==i]["precision"]
+        recall = df[df["class"]==i]["recall"]
+        
+        class_auc_pr[i] = auc(recall, precision)
+
+        # fig.add_trace(go.Scatter(x=[0,1], y=[random_rp_dict[i],random_rp_dict[i]], name=classes[i] +"_random", mode='lines',line=dict(color=colors[classes[i]], width=1,dash='dash')))
+
+    fig.update_layout(
+        plot_bgcolor='white',
+        xaxis_title='Recall',
+        yaxis_title='Precision',
+        width=1000, height=500,
+        title='Precision-Recall Curve'
+    )
+    fig.update_xaxes(mirror=True, ticks='outside', showline=True, linecolor='black',gridcolor='lightgrey')
+    fig.update_yaxes(mirror=True, ticks='outside', showline=True, linecolor='black',gridcolor='lightgrey')
+
+    
+    save_name = "prcurve_"+patient_id+"{epoch}.html"
+    fig_name = save_name.format(epoch=epoch)
+    
+    fig.write_html(fig_name)
+    run.log({"Precision-Recall for "+patient_id: wandb.Html(open(fig_name))})
+
+    # plt.plot(rc_list,pr_list)
+    # plt.show()
+
+
+
+if __name__ == '__main__':
+    dataset_test_location = '/home/mahirwar/Desktop/Monika/npsad_data/monika/LBD/Train_val_LB/val'
+
+    #model_path = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/models/mrcnn_models/pretty-breeze-80_mrcnn_model_50.pth"
+    model_path = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/models/mrcnn_models/rich-lake-65_mrcnn_model_50.pth"
+    #model_path = "/gladstone/finkbeiner/steve/work/data/npsad_data/monika/LBD/models/mrcnn_models/frosty-sun-61_mrcnn_model_50.pth"
+    # model_path = /home/vivek/Projects/amyb-plaque-detection/models/swift-brook-705_mrcnn_model_100.pth
+    # model_path = "/home/vivek/Projects/amyb-plaque-detection/models/dry-disco-560_mrcnn_model_50.pth"
+
+    epoch = 0
+
+    ## CONFIGS ##
+    collate_fn = lambda _: tuple(zip(*_)) # one-liner, no need to import
+
+    test_config = dict(
+        epochs = 1,
+        batch_size = 8,
+        num_classes = 2,
+        device_id = 0,
+        ckpt_freq =500,
+        eval_freq = 30,
+    )
+
+    device = torch.device('cuda', test_config['device_id'])
+    
+    
+    test_patient_ids = os.listdir(dataset_test_location)
+    
+    if '.DS_Store' in test_patient_ids:
+        test_patient_ids.remove('.DS_Store')
+       
+    isKfold_eval = True
+        
+    # Mapping
+    #fn_relabel = lambda i: [1, 2, 1, 3][i - 1]
+    #test_dataset = build_features.LBD_Dataset(dataset_test_location, T.Compose([T.ToTensor()]))
+    #test_dataset = build_features.DatasetRelabeled(test_dataset, fn_relabel) 
+
+
+    #test_data_loader = torch.utils.data.DataLoader(
+    #        test_dataset, batch_size=test_config['batch_size'], shuffle=False, num_workers=4,
+    #        collate_fn=collate_fn)
+    
+    # Buid Model
+    model_config = _default_mrcnn_config(num_classes=1 + test_config['num_classes']).config
+    model = build_default(model_config, im_size=1024)
+    model = model.to(device)
+
+    # Load Weights
+    state_dict = torch.load(model_path)
+    model.load_state_dict(state_dict)
+
+    run = wandb.init(project='LBD', entity='monika-ahirwar', mode="online")
+
+    # Evaluate
+    #eval_res = evaluate(run, model, test_data_loader, device=device, epoch=50)
+    #evaluate(run, model, test_data_loader, device=device)
+    
+    #plotPRcurve(eval_res, epoch, run)
+    eval_metric_full_training = pd.DataFrame()
+    for t in range(len(test_patient_ids)):
+        if len(os.listdir(os.path.join(dataset_test_location,test_patient_ids[t],"images")))==0:
+            continue
+        test_ds = build_features.LBD_Dataset(os.path.join(dataset_test_location,test_patient_ids[t]), T.Compose([T.ToTensor()]),["images","labels"])
+        test_loader = torch.utils.data.DataLoader(test_ds, batch_size=test_config['batch_size'], shuffle=False, num_workers=4, collate_fn=collate_fn)
+        test_eval_res, test_eval_res_df, full_table = evaluate(run, model, test_loader, device, isKfold_eval)
+        test_eval_res_df["patient_id"] = test_patient_ids[t]
+        eval_metric_full_training = pd.concat([eval_metric_full_training,test_eval_res_df])
+        plotPRcurve(full_table, epoch, run,test_patient_ids[t])
+    eval_metric_full_training.to_csv("validation_result.csv")
+    avg_eval_metric =  eval_metric_full_training.groupby(["iou_type","metric_name"])["metric_value"].mean().reset_index()
+    #print(eval_metric_full_training)
+    tbl = wandb.Table(data=eval_metric_full_training)
+    run.log({"Val Evaluation Metric Patient-wise": tbl})
+    tbl = wandb.Table(data=avg_eval_metric)
+    run.log({"Average Evaluation Metric": tbl})
+
+    run.finish()
