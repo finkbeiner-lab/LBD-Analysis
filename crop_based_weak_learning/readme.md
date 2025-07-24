@@ -4,7 +4,12 @@
 
 The pretraining is done using SimCLR model.
 
+<p align="center">
+    <img src="models/gigapath_overview.png" width="50%"> <br>
 
+  *Overview of Prov-GigaPath model architecture*
+
+</p>
 
 
 ## Fine-tuned crops with weak labels as PDD or DLB 
