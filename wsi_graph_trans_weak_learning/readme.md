@@ -28,5 +28,11 @@ The model then predicts if the whole slide image is of PDD or DLB and generates 
 We generated heatmaps for correct predictions of PDD/DLB slides across different brain regions and across different antibodies 
 <p align="left">
     <img src="graphcam_vis/visualization.png" width="70%"> <br>
+  *DLB focussing on LB type aggegates area*
 </p>
-
+We generated heatmaps for correct predictions of PDD/DLB slides across different brain regions and across different antibodies 
+<p align="left">
+    <img src="graphcam_vis/visualization_PDD.png" width="70%"> <br>
+  *DLB focussing on few or no LB type aggegates area*
+    
+</p>
