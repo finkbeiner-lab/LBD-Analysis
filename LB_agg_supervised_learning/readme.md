@@ -2,7 +2,8 @@
 
 
 ## Trained a model for White Gray Matter Segmentation (Also used annotation from Qupath)
-<img width="434" height="245" alt="image" src="https://github.com/user-attachments/assets/41705f80-34d4-471f-a597-9837611e6ade" />
+<img width="956" height="387" alt="image" src="https://github.com/user-attachments/assets/c0cb5861-61e3-4912-8ff5-474c7a0334db" />
+
 
 
 ## Trained mask-rcnn model (resnet, Vit backbone) for instance segmentation
