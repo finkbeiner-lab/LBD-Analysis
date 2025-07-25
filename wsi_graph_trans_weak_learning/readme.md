@@ -33,6 +33,6 @@ We generated heatmaps for correct predictions of PDD/DLB slides across different
 We generated heatmaps for correct predictions of PDD/DLB slides across different brain regions and across different antibodies 
 <p align="left">
     <img src="graphcam_vis/visualization_PDD.png" width="70%"> <br>
-  *DLB focussing on few or no LB type aggegates area*
+  *PDD focussing on few or no LB type aggegates area*
     
 </p>
