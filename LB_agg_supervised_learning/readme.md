@@ -1,15 +1,10 @@
-# Supervised Learning - Annotated Lewy Body aggregates in Qupath
+# Supervised Learning - Lewy Body detection 
 
 
-## Trained a model for White Gray Matter Segmentation (Also used annotation from Qupath)
+## Trained a resnet clasifier model for White Gray Matter Segmentation and Mask RCNN Lewy Body detection 
 <img width="956" height="387" alt="image" src="https://github.com/user-attachments/assets/c0cb5861-61e3-4912-8ff5-474c7a0334db" />
 
-
-
-## Trained mask-rcnn model (resnet, Vit backbone) for instance segmentation
-
-
-## Trained Dino-v2 model (resnet, Vit backbone) for instance segmentation
+## Trained Dino-v2 model (resnet, Vit backbone) for instance segmentation -- for better performance
 <img width="838" height="311" alt="image" src="https://github.com/user-attachments/assets/3e912ccc-e3d9-400b-9658-ff80ba741147" />
 
 
