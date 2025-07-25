@@ -1,10 +1,10 @@
 # Supervised Learning - Lewy Body detection 
 
 
-## Trained a resnet clasifier model for White Gray Matter Segmentation and Mask RCNN Lewy Body detection 
+## Trained a resnet clasifier model for White Gray Matter Segmentation and Mask RCNN (resnet, Vit backbone) Lewy Body detection 
 <img width="956" height="387" alt="image" src="https://github.com/user-attachments/assets/c0cb5861-61e3-4912-8ff5-474c7a0334db" />
 
-## Trained Dino-v2 model (resnet, Vit backbone) for instance segmentation -- for better performance
+## Trained Dino-v2 model for instance segmentation -- for better performance
 <img width="838" height="311" alt="image" src="https://github.com/user-attachments/assets/3e912ccc-e3d9-400b-9658-ff80ba741147" />
 
 
