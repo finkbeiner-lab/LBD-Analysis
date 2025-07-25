@@ -9,7 +9,7 @@ Goal is to distinguish brains of PDD and DLB patients.
 
 Three complementary methods are developed
 
-Method 1 Supervised learning
+Method 1 Supervised learning (LB_agg_supervised_learning)
 
 Method 2 Slide level graph learning
 
