@@ -24,3 +24,6 @@ The model then predicts if the whole slide image is of PDD or DLB and generates 
 ## Model performance
 <img width="370" height="83" alt="image" src="https://github.com/user-attachments/assets/a1b9724f-e4bd-4bc2-8a9e-558cb20a460a" />
 
+## Graph Cam
+We generated heatmaps for correct predictions of PDD/DLB slides across different brain regions and across different antibodies 
+
