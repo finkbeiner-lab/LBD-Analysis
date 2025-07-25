@@ -9,11 +9,11 @@ Goal is to distinguish brains of PDD and DLB patients.
 
 Three complementary methods are developed
 
-Method 1 Supervised learning (LB_agg_supervised_learning)
+**Method 1** Supervised learning (LB_agg_supervised_learning)
 
-Method 2 Slide level graph learning (wsi_graph_trans_weak_learning)
+**Method 2** Slide level graph learning (wsi_graph_trans_weak_learning)
 
-Method 3 Crop level learning (crop_based_weak_learning)
+**Method 3** Crop level learning (crop_based_weak_learning)
 
 
 
