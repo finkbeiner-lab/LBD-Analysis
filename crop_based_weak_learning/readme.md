@@ -16,20 +16,34 @@ The pretraining is done using SimCLR model.
 
 Fine-tune the crops using pretrained model as backbone to classify crop as PDD or DLB 
 
+<p align="center">
+    <img src="models/finetuning.png" width="50%"> <br>
+
+  *Finetuning*
+
+</p>
+
+<p align="center">
+    <img src="models/model_performance.png" width="50%"> <br>
+
+  *Model Performance*
+
+</p>
+
 
 ## Apply gradcam to see features responsible for model's prediction
 
 
 <p align="center">
-    <img src="crop_based_weak_learning/explainability/dlb_explain.png" width="50%"> <br>
+    <img src="explainability/dlb_explain.png" width="50%"> <br>
 
   *DLB crop*
 
 </p>
 
 <p align="center">
-    <img src="crop_based_weak_learning/explainability/pdd_explain.png" width="50%"> <br>
+    <img src="explainability/pdd_explain.png" width="50%"> <br>
 
-  *DLB crop*
+  *PDD crop*
 
 </p>
