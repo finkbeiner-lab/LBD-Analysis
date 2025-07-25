@@ -27,3 +27,4 @@ The model then predicts if the whole slide image is of PDD or DLB and generates 
 ## Graph Cam
 We generated heatmaps for correct predictions of PDD/DLB slides across different brain regions and across different antibodies 
 
+wsi_graph_trans_weak_learning/graphcam_vis/visualization.png
